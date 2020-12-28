@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Sistema de Estoque - Página Inicial</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css.css')}}">
+    </head>
+    <body>
+
+        <div id="container">
+            <div id="head">
+                <a href="index.html">
+                </a>
+            </div>
+
+            <div id= "menu">
+                <ul>
+                    <li><a href="{{ url_for('cadastrar')}}">Cadastrar Produtos</a></li>
+                    <li><a href="{{ url_for('comprar')}}">Comprar Produtos</a></li>
+                     <li><a href="{{ url_for('estoque')}}">Estoque de Produtos</a></li>
+                    <li><a href="{{ url_for('historico')}}">Histórico de Compras</a></li>
+                </ul>
+            </div>
+            <div id="corpo">
+                <p>Corpo</p>
+            </div>
+        </div>
+
+    </body>
+</html>

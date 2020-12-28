@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Sistema de Estoque - Histórico de Compras</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css.css')}}"></head>
+    <body>
+        <div id="container">
+            <div id="head">
+                <a href="index.html">
+                </a>
+            </div>
+
+            <div id= "menu">
+                <ul>
+                    <li><a href="{{ url_for('cadastrar')}}">Cadastrar Produtos</a></li>
+                    <li><a href="{{ url_for('comprar')}}">Comprar Produtos</a></li>
+                     <li><a href="{{ url_for('estoque')}}">Estoque de Produtos</a></li>
+                    <li><a href="{{ url_for('historico')}}">Histórico de Compras</a></li>
+                </ul>
+            </div>
+            <div id="corpo">
+                <h1>Histórico de Compras</h1>
+                <hr>
+                <table border="4">
+                    <tr>
+                        <td>ID</td>
+                        <td>Nome</td>
+                        <td>Quantidade</td>
+                        <td>Preço</td>
+                        <td>Preço Médio</td>
+                    </tr>
+                    {% for compras in compras %}
+                    <tr>
+                        <td>{{ compras._id}}</td>
+                        <td>{{ compras.nome}}</td>
+                        <td>{{ compras.quantidade}}</td>
+                        <td>{{ compras.preco}}</td>
+                        <td>{{ compras.pmedio}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+
+    </body>
+</html>
