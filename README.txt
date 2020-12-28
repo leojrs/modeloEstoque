@@ -2,10 +2,6 @@ Como inicializar
 Instalando as tecnologias necessárias
 Instale python 3.5.2 ou superior
 
-Na maioria das distros Linux o python já vem pré instalado
-
-Para Mac OS X, use: brew install python3
-
 É possível que a máquina já possua o virtualev, se não, execute o comando para instalá-lo:
 
 $ sudo pip install virtualenv
